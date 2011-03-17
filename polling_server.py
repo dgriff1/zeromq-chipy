@@ -13,7 +13,6 @@ poller.register(socket, zmq.POLLIN)
 
 # Process messages from both sockets
 while True:
-	print "Polling"
 	socks = dict(poller.poll(timeout=0))
 	print "Poll results ", socks
 	if socket in socks and socks[socket] == zmq.POLLIN:
