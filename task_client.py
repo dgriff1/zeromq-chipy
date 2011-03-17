@@ -16,7 +16,7 @@ sender.connect("tcp://localhost:5558")
 
 while True:
 	s = receiver.recv()
-	print "Sleeping ", s
+	print "Sleeping ", s, " msec "
 	time.sleep(int(s) * 0.001)
 	sender.send(s)
 
