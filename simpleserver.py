@@ -9,6 +9,6 @@ socket.bind("tcp://*:5555")
 while True:
 	message = socket.recv()
 	print "Recv ", message
+	socket.send(message + " World")
 
 	time.sleep(1) # hangin loose
-	socket.send("World")
